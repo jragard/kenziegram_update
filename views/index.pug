@@ -1,0 +1,19 @@
+doctype
+html
+    head
+        title kenzie
+    body
+        h1 Welcome to Kenziegram
+        
+        form(method="post", action="http://localhost:3000/upload", enctype="multipart/form-data")
+        
+            input(type="file", name="myFile")
+
+        
+            button(type="submit") Upload
+
+        div
+            each image in images
+                if (image != '.DS_Store')
+                    img(src=image)
+
