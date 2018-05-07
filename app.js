@@ -33,5 +33,5 @@ app.post('/upload', upload.single('myFile'), function(req, res, next) {
 
 const DB_USER = "admin"
 const DB_PASSWORD = "admin"
-const URI =  "ds217310.mlab.com:17310"
+const DB_URI =  "ds217310.mlab.com:17310"
 const DB_NAME = "kenziegram-ryan"
