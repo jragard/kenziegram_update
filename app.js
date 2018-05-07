@@ -4,13 +4,14 @@ const multer = require('multer');
 const upload = multer({ dest: 'public/upload'});
 const port = process.env.PORT || 3000;
 const app = express();
+const mongoose = require('mongoose')
 
 const items = [];
 
 app.set('view engine', 'pug');
 app.use(express.static('public/upload'));
 app.use(express.static('public'))
-app.listen(port, );
+app.listen(port, () => mongoose.connect(`mongodb://${DB_USER}:${DB_PASSWORD}@${DB_URI}/${DB_NAME}`));
 
 app.get('/', function(req, res) {
     let images = "";
